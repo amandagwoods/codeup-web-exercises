@@ -33,9 +33,9 @@ console.log(helloMessage, 'Hello, Amanda');
  * console.
  */
 
-function sayHello(myName) {
-    return ("hello" + (myName));
-}
+// function sayHello(myName) {
+//     return ("hello" + (myName));
+// }
 var myName = " Amanda"
 console.log(sayHello (myName))
 
@@ -66,7 +66,8 @@ function isTwo(number){
 
 
 }
-console.log(random + "is" + isTwo(random))
+console.log(random + "is" + isTwo(random));
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -123,7 +124,12 @@ console.log(typeof tip);
  */
 
 function applyDiscount(price, discount) {
-    return price - (price * discount);
+    var discount = price * discount;
+    var price = price = discount;
+    return price;
+
+
+    //return price - (price * discount);
 }
 
 console.log(applyDiscount(45, .12), 40);
