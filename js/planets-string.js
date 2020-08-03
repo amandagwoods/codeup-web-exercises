@@ -53,4 +53,8 @@ document.write(planetsHTML);
     planetsUL += "</ul>";
     console.log(planetsUL);
     document.write(planetsUL);
+/////////////////or/////////
+    ///create new var, opening tags, array joined with li open and close, then closing tags
+    var planetsList = "<ul><li>" + planetsArray.join("</li><li>") + "</li></ul>"
+    console.log(planetsList);
 })();
