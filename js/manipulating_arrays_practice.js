@@ -44,11 +44,23 @@ console.log(moreSlices);
 //-1 can be used to indicate the end of the length of array (0,-1)
 //can use a slice with only 1 number and start at that variable (2)
 
-
+/////////////////////
 colors.reverse();
 console.log(colors);
 
-//sorting goes alpha or numberic order
+//sorting goes alpha or numeric order
 colors.sort();
 console.log(colors);
 
+var namesString = "Joe,Bob,Sally";
+
+console.log(namesString);
+////////////////
+
+"blue|red|yellow".split()
+"blue|red|yellow".split(""); // split by letter for letter count
+"blue|red|yellow".split("|");
+////////
+
+var fullNameArray = "Amanda-Nichole-Garrison-Woods";
+full
