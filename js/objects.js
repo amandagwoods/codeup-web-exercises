@@ -143,13 +143,15 @@ shoppers.forEach(hebTotal);
      *      ---
      *      ...
      */
+function loggingBooks(){
+        for (var i = 0 ; i < books.length ; i++ ) {
+            console.log("Book # " + (i + 1));
+            console.log("Title:" + books[i].title);
+            console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
+            console.log("---");
+        };
+    }
 
-for (var i = 0 ; i < books.length ; i++ ) {
-    console.log("Book # " + (i + 1));
-    console.log("Title:" + books[i].title);
-    console.log("Author: " + books[i].author.firstName + " " + books[i].author.lastName);
-    console.log("---");
-};
 
     /**
      * Bonus:
