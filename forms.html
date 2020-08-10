@@ -5,14 +5,14 @@
     <title>Register With Us</title>
 </head>
 <body>
-<form method="GET" action="https://request-inspector.glitch.me/">
-<div>
+<form method="POST" action="https://request-inspector.glitch.me/">
+
     <label for="email" >Email Address</label>
     <input id="email" type="text" name="email" placeholder="Email address">
     <br>
 
     <label for="password" >Password</label>
-    <input id="password" type="text" name="password" placeholder="Password">
+    <input id="password" type="password" name="password" placeholder="Password">
     <br>
 
     Bio:
@@ -20,26 +20,32 @@
     <textarea name="Bio" cols="80" row="10" maxlenghth="10" placeholder="Please fill out a short description of yourself:"></textarea>
     <br>
 
-    <label for="hear">How did you hear about us?</label>
-    <br>
-    Billboard <input type="checkbox" name="findUs_question_1" value="true" id="hear"><br>
-    Radio Advertisement <input type="checkbox" name="findUs_question_1" value="true" id="hear"><br>
-    Internet Advertisement <input type="checkbox" name="findUs_question_1" value="true" id="hear"><br>
-    Other <input type="checkbox" name="findUs_question_1" value="true" id="hear"><br>
+    <h3>How did you hear about us?</h3>
+    <lable for="billboard">Billboard</lable>
+    <input type="checkbox" name="hearAbout" value="true" id="billboard"><br>
+    <label for="radio">Radio Advertisement </label>
+    <input type="checkbox" name="hearAbout" value="true" id="radio"><br>
+    <lable for="internet">Internet Advertisement </lable>
+    <input type="checkbox" name="hearAbout" value="true" id="internet"><br>
+    <lable for="other">Other</lable>
+    <input type="checkbox" name="hearAbout" value="true" id="other"><br>
     <textarea name="Other" placeholder="If other please let us know:"></textarea>
     <br>
+
     <label for="browser">What web browser are you using?</label>
     <br>
+
     <select name="webBrowser_preference?" id="browser">
         <option value="chrome">Google Chrome</option>
         <option value="fireFox">FireFox</option>
         <option value="safari">Safari</option>
         <option value="other">Other</option>
     </select>
-    </div>
-        <div>
+
+    <br>
+
     <input type="submit">
-        </div>
+
 </form>
 
 </body>
