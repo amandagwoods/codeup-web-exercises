@@ -1,11 +1,25 @@
 
-h1{
+#container h1, #container>h2{
     color: pink;
     text-decoration: underline;
     background-color: darkcyan;
 }
-h2{
-    color: pink;
-    text-decoration: underline;
-    background-color: darkcyan;
+
+.fancy-header{
+    color: plum;
 }
+/*id uses .*/
+
+.xl{
+    font-size: 30px;
+}
+
+h1.md{
+    font-size: 15px;
+    color: palevioletred;
+}
+
+#end-title{
+    color: gold;
+}
+/*title uses #*/
