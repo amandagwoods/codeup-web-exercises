@@ -1,8 +1,18 @@
+body{
+    background-image: url("../img/canadian-dollar.png");
+}
+
 
 #container h1, #container>h2{
     color: pink;
     text-decoration: underline;
     background-color: darkcyan;
+    text-align: left;
+    text-indent: 50px;
+    font-family: "American Typewriter";
+    font-weight: lighter;
+    font-size: 3em;
+
 }
 
 .fancy-header{
@@ -11,11 +21,11 @@
 /*id uses .*/
 
 .xl{
-    font-size: 30px;
+    font-size: 4em;
 }
 
 h1.md{
-    font-size: 15px;
+    font-size: 1.5em;
     color: palevioletred;
 }
 
@@ -23,3 +33,25 @@ h1.md{
     color: gold;
 }
 /*title uses #*/
+
+/* unvisited link (:link) */
+a:link {
+    color:red;
+}
+
+/* visited link (:visited) */
+a:visited {
+    color:black;
+}
+
+/* mouse hover over link (:hover) */
+a:hover {
+    color:blue;
+}
+
+/* active/selected link (:active) */
+a:active {
+    color:green;
+}
+ol { list-style: upper-alpha; }
+ul { list-style: square; }
