@@ -1,4 +1,43 @@
-.fancy-header{
-    color: purple;
+body{
+    background: lavenderblush;
+    background-image: url("../img/let-there-be-sun.png");
+    font-family: Palatino;
+}
 
+.fancy-header{
+    color: lightcoral;
+    text-align: center;
+    background: lavenderblush;
+
+}
+h1, h2{
+    color: lightcoral;
+    text-underline: lightcoral;
+}
+
+ol { list-style: lower-alpha; }
+ul { list-style: square; }
+
+table{
+
+    border: 4px solid darkgoldenrod;
+    padding: 1em;
+    background: lavenderblush;
+    border-spacing: .5em;
+}
+
+a:link {
+    color:red;
+}
+
+a:visited {
+    color:black;
+}
+
+a:hover {
+    color:blue;
+}
+
+a:active {
+    color:green;
 }
