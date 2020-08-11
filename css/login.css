@@ -23,6 +23,7 @@ fieldset {
     box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     padding: 1em;
     background: white;
+    border: 0;
     /* There must be 1em between the content and the border of this element */
     /* It should have no border */
     /* Its background should be white */
@@ -57,7 +58,7 @@ fieldset {
     padding: 8px;
     font-weight: bold;
     color: white;
-    border: 1px lightgrey;
+    border: 1px lightgrey solid;
     /* There must be a separation of 8px between the text and the border of this element */
     /* The text color of this element should be white and bold */
     /* The border of this element should be 1px, and its color should be light grey */
@@ -68,6 +69,8 @@ fieldset {
     padding: 4px;
     margin-top: .5em;
     margin-bottom: .5em;
+    border: 1px lightgrey solid;
+
 
     /* There must be 4px on top of the text and below the text of an input with this class */
     /* It should have a separation of .5em from elements on top of it and below it */
