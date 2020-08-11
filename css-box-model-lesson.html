@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: calc(100% - 40px);
+            /*to make full screen on any device have 100% - the boarder and padding */
+            height: 300px;
+            border: 4px black solid;
+            margin: 10px;
+        }
+        #box1 {
+            background-color: pink;
+        /*    all directions*/
+            padding: 10px;
+            margin-top: 20px;
+
+        }
+        #box2 {
+            background-color: skyblue;
+        /*    top bottom, right left*/
+            padding: 10px 12px
+
+        }
+        #box3 {
+            background-color: mediumpurple;
+        /*    clockwise direction if padding in each direction from top*/
+            padding: 10px 11px 12px 13px;
+            /*padding-top: 10px;*/
+            /*padding-right: 11px;*/
+            margin-bottom: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo minus nisi numquam repellendus! Consequuntur ea nihil recusandae sed veniam. Alias aliquid amet deleniti dolores enim recusandae saepe totam voluptas voluptatum?</div>
+    <div id="box2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab culpa dolor, earum eius et explicabo facere facilis in iste maxime nam, nisi nobis, possimus quisquam soluta veniam veritatis voluptatum?</div>
+    <div id="box3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto aut deleniti dicta dolorum ea esse, illo iure molestias officia praesentium provident quae quas qui quis repellat vel. Aspernatur, cum.</div>
+</body>
+
+</html>
