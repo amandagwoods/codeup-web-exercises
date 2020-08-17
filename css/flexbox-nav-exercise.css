@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+nav {
+    background: #b3b3b3;
+    display: flex;
+    flex-direction: row;
+
+}
+ul {
+    list-style: none;
+    padding: 2em;
+    margin: 2em;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+nav a:hover {
+    background: lightskyblue;
+}
+.left {
+    display: flex;
+    size: 3em;
+    padding: .2em;
+    align-content: center;
+    margin: 0 auto;
+
+
+}
