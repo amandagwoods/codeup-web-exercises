@@ -7,32 +7,45 @@ body {
 nav {
     background: #b3b3b3;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
 
 }
 ul {
     list-style: none;
-    padding: 2em;
-    margin: 2em;
+    padding: 0;
+    margin: 0;
     display: flex;
     box-sizing: border-box;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+header nav li {
+    margin: 1em 0;
+    padding: 10px;
 }
 nav a {
     text-decoration: none;
     color: black;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Work Sans', sans-serif;
+    padding: .5em;
 }
 nav a:hover {
-    background: lightskyblue;
+    color: lightskyblue;
 }
-.left {
+.nav-left {
     display: flex;
-    size: 3em;
-    padding: .2em;
-    align-content: center;
     margin: 0 auto;
-
+    font-family: 'Work Sans', sans-serif;
+    size: 2em;
+}
+.logo {
+    size: 15em;
+    padding: .2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 
 }
+.nav-right {
+    display: flex;
+    margin: 0 auto;
+    font-family: "work sans", sans-serif;
+    size: 2em;
