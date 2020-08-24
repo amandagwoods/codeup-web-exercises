@@ -12,9 +12,12 @@
 .nav-link {
     border-color: gray;
 }
+
 .jumbotron {
     background-image: url("../img/pizza.png");
     background-repeat: no-repeat;
+    padding-left: 0;
+    padding-right: 0;
 
 }
 .jumbotron > h1 {
