@@ -7,10 +7,90 @@
     <title>Bootstrap Grid Resume</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- Your custom css styles go here -->
+    <style>
+        #name-row{
+            background: lemonchiffon;
+        }
+        #title {
+            background: lightgreen;
+        }
+        #left-side {
+            background: lightgray;
+        }
+        .section-heading {
+            color: red;
+            font-weight: bolder;
+        }
+        #right-side {
+            background: lightblue;
+        }
+    </style>
 </head>
 <body>
 
 <!-- Main page content -->
+<div class="container">
+    <div class="row" id="name-row">
+        <div class="col-12 text-center ">
+            <h1>People Person</h1>
+        </div>
+    </div>
+
+    <div class="row text-center" id="title">
+        <div class="col-12"></div>
+            <h4>Software Developer</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias culpa doloremque dolores fuga, fugiat id incidunt inventore ipsam ipsum magnam, minima natus, nihil odit placeat quam quo rerum soluta ut.</p>
+            <div class="col-12 col-md-6 col-lg-3">PHONE HERE</div>
+            <div class="col-12 col-md-6 col-lg-3">EMAIL HERE</div>
+            <div class="col-12 col-md-6 col-lg-3">LINKEDIN HERE</div>
+            <div class="col-12 col-md-6 col-lg-3">GITHUB HERE</div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-12 col-md-4" id="left-side">
+            <!-- left side content -->
+            <section>
+                <h6 class="section-heading">SKILLS & ABILITIES</h6>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JAVASCRIPT</li>
+                    <li>BOOTSTRAP</li>
+                </ul>
+            </section>
+            <section>
+                <h6 class="section-heading">ACADEMIC</h6>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores aspernatur aut beatae dolorem enim eos inventore minima, natus necessitatibus perspiciatis qui quis unde. Blanditiis minima nihil officiis sunt voluptatum.
+                </p>
+            </section>
+            <section>
+                <h6 class="section-heading">PROFESSIONAL EXPERIENCE</h6>
+                <p>Job 1</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores et nostrum quibusdam sapiente ullam. Adipisci atque doloremque error facere facilis in nulla perferendis quas temporibus ullam! Deserunt, distinctio, saepe.</p>
+                <p>Job 2</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad architecto aspernatur autem, consequuntur cumque deleniti eveniet fuga harum iusto laboriosam nihil nisi nostrum nulla possimus repudiandae soluta, ullam voluptates!</p>
+            </section>
+        </div>
+        <div class="col-12 col-md-8" id="right-side">
+            <!-- right side content -->
+            <section>
+                <h6 class="section-heading">DEVELOPMENT PROJECTS</h6>
+                <p>Project 1</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ducimus excepturi necessitatibus non perferendis quaerat sapiente tenetur? Ea earum error libero mollitia omnis quae quia reprehenderit sapiente tempora. Dolorem, suscipit?</p>
+                <p>Project 2</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequuntur, cum eligendi est fugiat harum in iure, natus possimus quae quia repellendus reprehenderit saepe sequi soluta unde veniam! Ex, sit?</p>
+            </section>
+            <section>
+                <h6 class="section-heading">AWARDS & INVOLVEMENT</h6>
+                <p>Award 1</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis distinctio excepturi illo molestiae nisi quaerat soluta, voluptas! Nulla numquam officia sequi. Amet ea iusto magni possimus quod recusandae voluptas? Accusantium.</p>
+                <p>Involvement 1</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam architecto debitis distinctio, enim eos esse facere id impedit, laborum libero magnam minus porro quasi repudiandae saepe soluta sunt suscipit?</p>
+
+            </section>
+    </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
