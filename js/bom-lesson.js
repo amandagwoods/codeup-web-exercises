@@ -27,15 +27,15 @@ sayHello(name);
     //     alert("oh, that's nice. i like blue.")
     // }
 
-    // var numberOfTimesRun=0;
-    //
-    // var helloInterval = setInterval(function(){
-    //     numberOfTimesRun += 1;
-    //     console.log("hello " + numberOfTimesRun);
-    //     if(numberOfTimesRun >= 5){
-    //         clearInterval(helloInterval)
-    //     }
-    // }, 2000);
+    var numberOfTimesRun=0;
+
+    var helloInterval = setInterval(function(){
+        numberOfTimesRun += 1;
+        console.log("hello " + numberOfTimesRun);
+        if(numberOfTimesRun >= 5){
+            clearInterval(helloInterval)
+        }
+    }, 2000);
 
 
     // setTimeout(function(){
