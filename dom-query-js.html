@@ -25,16 +25,28 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id="btn1">JS is cool!</button>
+<button id="btn2">Turn blue</button>
+<button id="btn3">List item color</button>
+<button id="btn4">Mission Accomplished!</button>
+
 <script>
     (function() {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
         var mainHeader = document.getElementById("main-header");
         console.log(mainHeader);
+       ------------------------
+        var listener = function (event) {
+           alert("you clicked the button!");
+        }
+        var btn1 = document.querySelector("#mainHeader").addEventListener("click",listener);
+
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
         mainHeader.innerHTML = "JavaScript is Cool";
         console.log(mainHeader.innerHTML);
+
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById("sub-header");
