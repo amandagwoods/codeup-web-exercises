@@ -11,7 +11,17 @@
             background-color: #b4d455;
             font-weight: bolder;
         }
+        .yellow {
+            background-color: yellow;
+        }
+
+        .fist-item-highlight {
+            color: blue;
+
+        }
     </style>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 </head>
 <body>
 <!--attributes and css exercise -->
@@ -55,16 +65,16 @@
 
 <!--Traversing exercise -->
 
-<h3>National Parks</h3>
-<ul id="national-parks">
-    <li>Arches</li>
-    <li>Badlands</li>
-    <li>Carlsbad Caverns</li>
-    <li>Denali</li>
-    <li>Everglades</li>
-</ul>
+    <h3>National Parks</h3>
+        <ul id="national-parks1">
+            <li>Arches</li>
+            <li>Badlands</li>
+            <li>Carlsbad Caverns</li>
+            <li>Denali</li>
+            <li>Everglades</li>
+        </ul>
     <h3>State Parks of Texas</h3>
-        <ul id="state-parks-texas">
+        <ul id="state-parks-texas1">
             <li>Abilene</li>
             <li>Big Bend</li>
             <li>Choke Canyon</li>
@@ -72,7 +82,7 @@
         </ul>
 
         <h3>National Parks</h3>
-            <ul id="national-parks">
+            <ul id="national-parks2">
                 <li>Arches</li>
                 <li>Badlands</li>
                 <li>Carlsbad Caverns</li>
@@ -80,7 +90,7 @@
             </ul>
 
         <h3>State Parks of Texas</h3>
-            <ul id="state-parks-texas">
+            <ul id="state-parks-texas2">
                 <li>Abilene</li>
                 <li>Big Bend</li>
                 <li>Choke Canyon</li>
@@ -88,10 +98,10 @@
             </ul>
 
     <!--button-->
-    <button type="button">Click Me!</button>
+    <button id="button" type="button">Click Me!</button>
 
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
 
 <script>
     "use strict";
@@ -111,6 +121,35 @@
             $(this).toggleClass("highlight");
         });
 
+       //traversing exercise
+
+        $("#highlighter").on("click", function(){
+            $("ul").each(function(index, element){
+                $(element).children().last.toggleClass("highlight");
+            });
+        })
+
+        $("h3").click(function(){
+            $(this).next().children().css("font-weight: bold");
+        });
+
+
+       $(".button").click(function(event) {
+           event.preventDefault();
+           $("li").last().toggleClass("yellow");
+       });
+
+       $("h3").click(function(event) {
+           event.preventDefault();
+           $("li").children.css.("font-weight: bold");
+       })
+        $("li").click(function(){
+            $(this).parent().children().first().toggleClass("first-item-highlight");
+        })
+
+
+
+
         //jquery each method
         $dts.each(function (index){
             console.log(index, element);
@@ -126,17 +165,17 @@
         $dts.last().css("background-color", "green");
 
         //jquery children method
-        $("#national-parks").children().last().addClass("highlight");
+        $("#national-parks1").children().last().addClass("highlight");
 
         //Parent
-        // $("#state-parks-texas > li").parent()
+        // $("#state-parks-texas1 > li").parent()
 
         $("li").click(function() {
             console.log(this);
             $(this).parent().toggleClass("highlight");
         })
 
-        $("dt").click(function(){
+        $dts.click(function(){
             $(this).next().toggleClass("highlight");
         })
     });
