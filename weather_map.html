@@ -4,38 +4,14 @@
     <meta charset="UTF-8">
     <title>What's the weather?</title>
 
-    <script src="js/keys.js"></script>
+
 </head>
 <body>
 
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<script>
-    (function() {
+<script src="js/keys.js"></script>
+<script src="js/weather_map.js"></script>
 
-            var openWeatherAPIURL = "https://api.openweathermap.org/data/2.5/weather";
-
-            $.ajax(openWeatherAPIURL, {
-                "APPID": omwKey,
-                "q": "Dallas, TX, US",
-                "units": "imperial"
-            }).done(function(data){
-                console.log(data);
-            });
-
-            // $.get("http://api.openweathermap.org/data/2.5/weather", {
-            //     APPID: OPEN_WEATHER_APPID,
-            //     q:     "San Antonio, US"
-            // }).done(function(data) {
-            //     console.log(data);
-            // });
-
-
-
-
-
-
-    }());
-</script>
 </body>
 </html>
