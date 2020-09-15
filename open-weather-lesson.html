@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>open weather lesson</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<h1>Open Weather</h1>
+
+
+<script src="/js/keys.js"></script>
+
+<script>
+    (function(){
+        $(document).ready(function(){
+            var openWeatherAPIURL = "api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=dae14d62e294f68c298792a41a179a11"
+
+            $.get(openWeatherAPIURL, {
+                "APPID": omwKey,
+                "q": "Dallas, TX, US",
+                "units": "imperial"
+            }).done(function(data){
+                console.log(data);
+            });
+
+        });
+
+    })();
+</script>
+
+</body>
+</html>
