@@ -30,5 +30,12 @@
             "tool"
         ],
         "price": 10
-    }
+    }, {
+        "title": "Flowers",
+        "quantity": 45,
+        "categories": [
+            "plants"
+        ],
+        "price": 15
+}
 ]

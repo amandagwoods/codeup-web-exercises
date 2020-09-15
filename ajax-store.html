@@ -1,39 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Online Store</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
 <h1>My Tool Store</h1>
 
-<table id="products">
+<table id="products" class="table table-striped">
     <thead>
         <tr>
-            <th>Title</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Categories</th>
+            <th scope="col">Title</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+            <th scope="col">Categories</th>
         </tr>
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
+<!--button-->
+<p><input type="button" value="Refresh Webpage." onclick='refreshPage()'/>
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
 (function() {
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
-    $.ajax("/data/inventory.json")
-
+    //
+    var url = "data/inventory.json"
+    $.ajax(url)
+        .done(function(data){
+            console.log(data, data.title);
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
+            var store_data = "";
+
+            $.each(data, function(key, tool) {
+                store_data += '<tr>';
+                // store_data += '<th scope="row">' '</td>';
+                store_data += '<td scope="col">' +tool.title+ '</td>';
+                store_data += '<td scope="col">' +tool.quantity+ '</td>';
+                store_data += '<td scope="col">' +tool.price+ '</td>';
+                store_data += '<td scope="col">' +tool.categories+ '</td>';
+                store_data += '</tr>';
+            });
+
+            $('#products').append(store_data);
+        });
 
 
 })();
+</script>
+<!--    refresh page-->
+<script type="text/javascript">
+    function refreshPage(){
+        if(confirm("Are you sure, want to refresh?")){
+            location.reload();
+        }
+    }
 </script>
 
 </body>
