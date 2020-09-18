@@ -1,21 +1,37 @@
 "use strict";
-$(document).ready(function(){
+
+$(document).ready(function() {
 //---------mapbox--------
     mapboxgl.accessToken = mapboxToken;
 
-    var map = new mapboxgl.Map({
+    let map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
         zoom: 10,
-        center: {lng: -97.3208, lat: 32.7254},
+        center: {lng: -97.3208, lat: 32.7254}, //starting in FW
     });
 
 
 //-----------marker----------
-    var marker = new mapboxToken.marker();
-    marker.settingLngLat({lng: -97.3208, lat: 32.7254});
-    marker.addTo(map);
-    marker.setDraggable(true);
+//     var marker = new mapboxToken.Marker({
+//         draggable: true,
+//     };
+//         .setLngLat(data)
+//         .addTo(map);
+//
+//         function dragMarker(){
+//             let dragLocation = marker.getLngLat();
+//             getCurrentWeather(dragLocation.lng, dragLocation.lat);
+//             getForecast(dragLocation.lng, dragLocation.lat);
+//             map.flyTo({
+//                 center: [dragLocation.lng, dragLocation.lat],
+//                 zoom: 10,
+//             })
+//         }
+//         marker.on('dragend', dragMarker)
+//     marker.settingLngLat({lng: -97.3208, lat: 32.7254});
+//     marker.addTo(map);
+//     marker.setDraggable(true);
 
     //----------FW Weather-------------------------
 
@@ -62,7 +78,7 @@ $(document).ready(function(){
         var latitude = lngLat.lat;
         weatherOptions.lat = latitude
         weatherOptions.lon = longitude
-        reverseGeocode({lng: longitude, lat: latitude}, mapboxKey).then(function (result) {
+        reverseGeocode({lng: longitude, lat: latitude}, mapboxToken).then(function (result) {
             $('#current-city').empty()
             $('#current-city').append("Current Location " + result)
         });
@@ -74,7 +90,7 @@ $(document).ready(function(){
     var searchBar = document.querySelector('#input');
     $("newLocation").click(function (e) {
         e.preventDefault();
-        geocode(searchBar.value, mapboxKey).then(function (result) {
+        geocode(searchBar.value, mapboxToken).then(function (result) {
             map.setCenter(result);
             map.setZoom(10);
             marker.setLngLat(result);
@@ -86,4 +102,4 @@ $(document).ready(function(){
 
 
 
-})
+});
