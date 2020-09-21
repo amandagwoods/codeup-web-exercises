@@ -1,18 +1,25 @@
 "use strict"
 
-let gitReposUrl = "https://api.github.com/users/amandagwoods/events";
 
 
 function getLastCommitDate(username) {
- return fetch(gitReposUrl, {
-     headers: {'Authorization': gitToken}})
-     .then(response => response.json())
-     .then(data => console.log(data))
-    //  .then(events => {
-    //     return events.filter(event => event.type === "PushEvent")[0].created_at;
-    // })
-    .catch(error => console.error(error));
+    let url = `https://api.github.com/users/${username}/events`;
+
+    console.log(url);
+
+    return fetch(url, {headers: {'Authorization': gitToken}})
+     .then((response) => response.json())
+     .then(listOfEvents))=>{
+        console.log(listOfEvents);
+        for(let event of listOfEvents) {
+            if(event.type === 'PushEvent'){
+                return event.created_at;
+            }
+        }
+     })
 }
+
+getLastCommitDate("amandagwoods") .then( date => console.log("last commit date: ", date));
 
 
     //
