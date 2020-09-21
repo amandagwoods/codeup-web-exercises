@@ -4,11 +4,16 @@ let gitReposUrl = "https://api.github.com/users/amandagwoods/events";
 const gitToken = "96846451d9e52a913a029f68cdb2752d1b830d63"
 
 
-
- fetch(gitReposUrl, {headers: {'Authorization': gitToken}})
-    .then(response => response.json())
-    .then(data => console.log(data))
+function getLastCommitDate(username) {
+ return fetch(gitReposUrl, {
+     headers: {'Authorization': gitToken}})
+     .then(response => response.json())
+     .then(data => console.log(data))
+    //  .then(events => {
+    //     return events.filter(event => event.type === "PushEvent")[0].created_at;
+    // })
     .catch(error => console.error(error));
+}
 
 
     //
