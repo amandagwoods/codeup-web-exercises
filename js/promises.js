@@ -1,7 +1,6 @@
 "use strict"
 
 let gitReposUrl = "https://api.github.com/users/amandagwoods/events";
-const gitToken = "96846451d9e52a913a029f68cdb2752d1b830d63"
 
 
 function getLastCommitDate(username) {
