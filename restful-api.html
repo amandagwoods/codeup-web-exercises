@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>restful api practice</title>
+</head>
+<body>
+
+<script>
+const reviewObj = {
+    "restaurant_id": "1",
+    "name": "Amanda",
+    "rating": "5",
+    "comments": "Great service! Loved the beautiful conchas and other pan dulce!"
+}
+const url = 'https://codeup-restful-example.glitch.me/reviews';
+
+const options = {
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+    },
+    body: JSON.stringify(reviewObj),
+};
+fetch(url, options)
+    .then(response => console.log(response))
+    .catch(error => console.error(error));
+
+</script>
+</body>
+</html>
